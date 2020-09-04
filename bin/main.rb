@@ -1,1 +1,3 @@
-require '../lib/chatterbot'
+require '../lib/twitter'
+require '../lib/scrapper.rb'
+
