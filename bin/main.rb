@@ -1,3 +1,3 @@
-require '../lib/twitter'
-require '../lib/scrapper.rb'
+require '../lib/pc_bot.rb'
+require '../lib/scraper.rb'
 
