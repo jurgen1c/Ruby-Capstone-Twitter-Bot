@@ -1,6 +1,6 @@
 # Ruby-Capstone-Twitter-Bot
 
-In this repo a twitter bot will be built using Ruby and chatterbot:
+In this repo a twitter bot was built using Ruby and chatterbot:
 
 - Create bot config file for api access
 - Built web scraper for bot content using nokogiri
@@ -20,14 +20,14 @@ In this repo a twitter bot will be built using Ruby and chatterbot:
 
 - The purpose of this bot is to apply some social pressure to the Goverment bodies of my country Costa Rica, by reminding each of them how many days they have left to inact change until the next election. This is backed up with data from the national census ministry on unemployment and the current data on covid cases from worldmeters.info.
 
-  ![screenshot](./media/tweet_example.png)
+  ![screenshot](./Media/tweet_example.png)
 
 
 
 ## Screenshot
 
-![screenshot](./media/Bot-screeanshot1.png)
-![screenshot](./media/Bot-screenshot2.png)
+![screenshot](./Media/Bot-screeanshot1.png)
+![screenshot](./Media/Bot-screenshot2.png)
 
 ## Built With
 
