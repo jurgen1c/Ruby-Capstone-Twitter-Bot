@@ -34,4 +34,4 @@ describe Scraper do
       expect(nester.find_health).to include('Coronavirus Cases:')
     end
   end
-end
+endrub
