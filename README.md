@@ -10,7 +10,7 @@ In this repo a twitter bot was built using Ruby and chatterbot:
 
 ## Setup
 
-- Download or clone the repository's files [github repo](https://github.com/jurgen1c/Ruby-Tic-Tac-Toe.git)
+- Download or clone the repository's files [github repo](https://github.com/jurgen1c Ruby-Capstone-Twitter-Bot.git)
 - Have Ruby 2.7 installed (to check if it is installed you can run: ruby -version in your console)
 - Install necessary gems (Chatterbot & Nokogiri, run cmd gem install <'gem name'>)
 - In your terminal navigate to directory and run command ruby bin/whistle_bot.rb
