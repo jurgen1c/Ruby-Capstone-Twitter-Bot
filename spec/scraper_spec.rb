@@ -1,21 +1,26 @@
+require_relative '../lib/scraper.rb'
 
- @title = indicador.css('h2').inner_text
- @subtitle = indicador.css('h5').first.inner_text
- @data = indicador.css('.datos').css('.indice-general').first.inner_text
- @graphic = indicador.css('.canvas-299-mini')
- @src = indicador.css('figure').css('.fuente').inner_text
+describe Scraper do
+  tester = Scraper.new('https://www.inec.cr/', '.indicador-299', 'h2', 'h5', '.indice-general')
+  nester = Scraper.new('https://www.worldometers.info/coronavirus/country/costa-rica/',
+                       '.content-inner', '[id="maincounter-wrap"]', '[id="maincounter-wrap"]',
+                       '[id="maincounter-wrap"]')
 
- indicador = { 
-        @subtitle => indicador.css('h5').first.inner_text,
-        @data => indicador.css('.datos').css('.indice-general').first.inner_text,
-        @graphic =>indicador.css('.canvas-299-mini'),
-        @src => indicador.css('figure').css('.fuente').inner_text 
-      }
-
-      def health
-        @url = 'www.'
-        
-        doc = URI.open(@url)
-        content = doc.read
-        parsed_content = Nokogiri::HTML(content)
-      end
+  context '#initialize' do
+    it 'Creates new scraper object url' do
+      expect(tester.url).to eql('https://www.inec.cr/')
+    end
+    it 'Creates new scraper object target' do
+      expect(tester.target).to eql('.indicador-299')
+    end
+    it 'Creates new scraper object t_loc' do
+      expect(tester.t_loc).to eql('h2')
+    end
+    it 'Creates new scraper object sub_loc' do
+      expect(tester.sub_loc).to eql('h5')
+    end
+    it 'Creates new scraper object d_loc' do
+      expect(tester.d_loc).to eql('.indice-general')
+    end
+  end
+end
