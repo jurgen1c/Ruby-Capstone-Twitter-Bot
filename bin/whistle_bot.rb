@@ -22,7 +22,8 @@ if Date.today.cwday == 5
       tweet "#{tweet_user(i)}\n Un recordatorio amigable les quedan #{countdown.to_s.split('/1')}
       días para arreglar el país\n\n #{reckoning.find_work}\n #{reckoning_h.find_health}"
       search(i).take(10).each do |tweet|
-        reply "@#{tweet_user(tweet)} #{reckoning}", tweet
+        reply "@#{tweet_user(tweet)}\n Un recordatorio amigable les quedan #{countdown.to_s.split('/1')}
+        días para arreglar el país\n\n #{reckoning.find_work}\n #{reckoning_h.find_health}", tweet
       end
     end
     sleep 604_800
