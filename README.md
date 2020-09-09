@@ -7,8 +7,6 @@ In this repo a twitter bot will be built using Ruby and chatterbot:
 - Create scraper class
 - Define scraper methods
 - Create background tweet loop that tweet's every friday 
-- Player name validity check
-- Restart method
 
 ## Setup
 
@@ -16,27 +14,20 @@ In this repo a twitter bot will be built using Ruby and chatterbot:
 - Have Ruby 2.7 installed (to check if it is installed you can run: ruby -version in your console)
 - Install necessary gems (Chatterbot & Nokogiri, run cmd gem install <'gem name'>)
 - In your terminal navigate to directory and run command ruby bin/whistle_bot.rb
+
+
 ## Description
 
-- Tic-Tac-Toe is a two player game were each must try to place three of their tokens in a row, vertically, horizontally or diagonally, in a three by three board to win.
+- The purpose of this bot is to apply some social pressure to the Goverment bodies of my country Costa Rica, by reminding each of them how many days they have left to inact change until the next election. This is backed up with data from the national census ministry on unemployment and the current data on covid cases from worldmeters.info.
 
-- Game board will be displayed in a coordinate table from a to c (lines) and 1 to 3 (columns), Example input a1 will place token in the first line and first column.
+  ![screenshot](./media/tweet_example.png)
 
-  ![screenshot](./media/Tic-Tac-Toe-empty-board.png)
-
-- At the beginning each player will be asked to input their name's and token of preference.
-
-- After which a random player will picked to start and place a token.
-
-- Each player take turns to place a token until one has won or the game is a draw
-
-- Once game is over player may restart by typing "y" in the console or exit by typing "n".
 
 
 ## Screenshot
 
-![screenshot](./media/TTT-screeanshot1.png)
-![screenshot](./media/TTT-screenshot2.png)
+![screenshot](./media/Bot-screeanshot1.png)
+![screenshot](./media/Bot-screenshot2.png)
 
 ## Built With
 
@@ -45,23 +36,13 @@ In this repo a twitter bot will be built using Ruby and chatterbot:
 - Linters: Rubocop, Rspec
 
 
-## Live Demo
-
-[Live Demo Link](https://repl.it/@JurgenClausen/main#main.rb)
-
-
 ### Prerequisites
 
 - Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
 
 
-## Authors
+## Author
 
-👤 **Youcef Abdellani**
-
-- Github: [@ABDELLANI-Youcef](https://github.com/ABDELLANI-Youcef)
-- Twitter: [@YoucefAbdellani](https://twitter.com/YoucefAbdellani)
-- Linkedin: [linkedin](https://www.linkedin.com/in/youcef-abdellani-b79361124/) 
 
 👤 **Jurgen Clausen Gutierrez**
 
@@ -82,16 +63,9 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - GitHub
-- TheOdinProject
 - Ruby
 
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
 
-
-API key: XR9hrSn1whCUnIim7fJEiV1e5
-
-API key secret:jOzEkBx2v6bIsa1yOj63ApZdfIojA9bplsj030A11FNYO9348P
-
-https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?idioma=1&CodCuadro=%201912 numero de ocupados por rama de actividad economica

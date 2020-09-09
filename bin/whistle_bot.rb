@@ -16,7 +16,7 @@ r_users = %w[presidenciacr asambleacr CCSSdeCostaRica TSECostaRica CarlosAlvQ ms
 reckoning = Scraper.new('https://www.inec.cr/', '.indicador-299', 'h2', 'h5', '.indice-general')
 reckoning_h = Scraper.new('https://www.worldometers.info/coronavirus/country/costa-rica/', '.content-inner',
                           '[id="maincounter-wrap"]', '[id="maincounter-wrap"]', '[id="maincounter-wrap"]')
-tweet 'hello world'
+
 if Date.today.cwday == 5
   loop do
     r_users.each do |i|
@@ -32,3 +32,4 @@ if Date.today.cwday == 5
 else
   puts 'Please wait till the end of the week'
 end
+
