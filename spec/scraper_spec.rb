@@ -23,4 +23,15 @@ describe Scraper do
       expect(tester.d_loc).to eql('.indice-general')
     end
   end
+
+  context '#find_work' do
+    it 'Finds relevent unemployment data from site' do
+      expect(tester.find_work).to include("TDA Tasa de Desempleo Abierto\n II Trimestre 2020\n 24,01 Tasa")
+    end
+  end
+  context '#find_health' do
+    it 'Finds relevant covid data from site' do
+      expect(nester.find_health).to include('Coronavirus Cases:')
+    end
+  end
 end

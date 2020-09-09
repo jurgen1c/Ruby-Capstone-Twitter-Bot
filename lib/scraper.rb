@@ -22,7 +22,7 @@ class Scraper
       @subtitle = x.css(@sub_loc).first.inner_text
       @data = x.css(@d_loc).first.inner_text
     end
-    "#{@title}\n #{@subtitle}\n % #{@data}"
+    "#{@title}\n #{@subtitle}\n #{@data}"
   end
 
   def find_health

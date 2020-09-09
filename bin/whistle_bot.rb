@@ -2,7 +2,6 @@ require 'rubygems'
 require 'chatterbot/dsl'
 require_relative '../lib/scraper.rb'
 
-
 election = Date.new(2022, 0o2, 22)
 date = Date.today
 countdown = election - date
@@ -32,4 +31,3 @@ if Date.today.cwday == 5
 else
   puts 'Please wait till the end of the week'
 end
-
