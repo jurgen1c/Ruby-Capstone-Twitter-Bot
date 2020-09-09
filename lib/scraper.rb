@@ -16,6 +16,16 @@ class Scraper
     @parsed_content = Nokogiri::HTML(content)
   end
 
+  def work
+    find_work
+  end
+
+  def health
+    find_health
+  end
+
+  private
+
   def find_work
     @parsed_content.css(@target).each do |x|
       @title = x.css(@t_loc).first.inner_text

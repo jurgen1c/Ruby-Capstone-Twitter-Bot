@@ -24,14 +24,14 @@ describe Scraper do
     end
   end
 
-  context '#find_work' do
+  context '#work' do
     it 'Finds relevent unemployment data from site' do
-      expect(tester.find_work).to include("TDA Tasa de Desempleo Abierto\n II Trimestre 2020\n 24,01 Tasa")
+      expect(tester.work).to include("TDA Tasa de Desempleo Abierto\n II Trimestre 2020\n 24,01 Tasa")
     end
   end
-  context '#find_health' do
+  context '#health' do
     it 'Finds relevant covid data from site' do
-      expect(nester.find_health).to include('Coronavirus Cases:')
+      expect(nester.health).to include('Coronavirus Cases:')
     end
   end
 end
