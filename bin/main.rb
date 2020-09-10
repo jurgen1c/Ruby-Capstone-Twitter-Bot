@@ -29,7 +29,7 @@ if Date.today.cwday == 5
       tweet_r = i + tweet_body
       bot.bot_actions('tweet', i, tweet_r)
       bot.bot_actions('search', "from:#{i}", result_type: 'recent').take(10).each do |tweet|
-        tester.bot_actions('reply', test_t, tweet.id)
+        bot.bot_actions('reply', tweet_r, tweet.id)
         puts tweet.text
       end
     end
