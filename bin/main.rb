@@ -5,7 +5,7 @@ require_relative '../lib/whistle_bot.rb'
 election = Date.new(2022, 0o2, 22)
 date = Date.today
 countdown = election - date
-bot = Whistle_bot.new
+bot = WhistleBot.new
 
 r_users = %w[@presidenciacr @asambleacr @CCSSdeCostaRica @TSECostaRica @CarlosAlvQ @msaludcr
              @ClaudiaDobles @paolavegar @pacasamblea @kike_sanchez @lguido @AndreaMeza76
@@ -20,7 +20,7 @@ reckoning_h = Scraper.new('https://www.worldometers.info/coronavirus/country/cos
 tweet_body = "\n Un recordatorio amigable les quedan #{countdown.to_s.split('/1')}
 días para arreglar el país\n\n #{reckoning.work}\n #{reckoning_h.health}"
 
-# Bot will only run on fridays to allow enough time to pass for relevant scraper data to update 
+# Bot will only run on fridays to allow enough time to pass for relevant scraper data to update
 # and not be blocked for spam
 
 if Date.today.cwday == 5
@@ -28,7 +28,7 @@ if Date.today.cwday == 5
     r_users.each do |i|
       tweet_r = i + tweet_body
       bot.bot_actions('tweet', i, tweet_r)
-      bot.bot_actions('search', "from:#{i}", result_type: "recent").take(10).each do |tweet|
+      bot.bot_actions('search', "from:#{i}", result_type: 'recent').take(10).each do |tweet|
         tester.bot_actions('reply', test_t, tweet.id)
         puts tweet.text
       end
@@ -37,18 +37,17 @@ if Date.today.cwday == 5
     break if Date.today == election
   end
 else
-  puts 'Please wait till the end of the week'
+  puts 'Please wait till next Friday'
 end
 
-# Since the code above will tweet at the president and his cabinet, 
-# to not spam these accounts and get flagged i have added the test code 
+# Since the code above will tweet at the president and his cabinet,
+# to not spam these accounts and get flagged i have added the test code
 # below to prove bot and scraper are working
 
 tester = %w[@giordano_diaz @sandooog]
 
-tester.each do |i|
-  tweet_r = i + tweet_body
-  bot.bot_actions('search', "from:HamillHimself", result_type: "recent").take(2).each do |tweet|
+tester.each do
+  bot.bot_actions('search', 'from:HamillHimself', result_type: 'recent').take(2).each do |tweet|
     puts tweet.text
   end
 end
