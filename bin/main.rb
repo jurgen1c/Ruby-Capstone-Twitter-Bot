@@ -47,9 +47,11 @@ end
 tester = %w[@giordano_diaz @sandooog]
 
 tester.each do
-  bot.bot_actions('search', 'from:HamillHimself', result_type: 'recent').take(2).each do |tweet|
-    puts tweet.text
-  end
+  bot.bot_actions('tweet', "#{tester} Hello there")
+end
+
+bot.bot_actions('search', 'from:HamillHimself', result_type: 'recent').take(2).each do |tweet|
+  puts tweet.text
 end
 
 puts reckoning.work
