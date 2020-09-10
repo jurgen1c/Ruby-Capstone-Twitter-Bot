@@ -26,7 +26,7 @@ In this repo a twitter bot was built using Ruby and Twitter Gem:
   ![screenshot](./Media/tweet_example.png)
 
 ## Video Presentation
- [Video Presentation]()
+ [Video Presentation](https://www.loom.com/share/647026b2c1ca4ef5977bd717f9af2baa)
 
 ## Main Screenshot
 
