@@ -1,20 +1,23 @@
 # Ruby-Capstone-Twitter-Bot
 
-In this repo a twitter bot was built using Ruby and chatterbot:
+In this repo a twitter bot was built using Ruby and Twitter Gem:
 
-- Create bot config file for api access
+- Created bot class
+- Define bot initialize methods to connect with twitter API
+- Define bot_actions method to access privte methods
+- Define private bot methods tweet, search & reply
 - Built web scraper for bot content using nokogiri
 - Create scraper class
 - Define scraper methods
-- Create background tweet loop that tweet's every friday 
+- Create background tweet loop in main that tweet's every friday 
 
 ## Setup
 
-- Download or clone the repository's files [github repo](https://github.com/jurgen1c Ruby-Capstone-Twitter-Bot.git)
+- Download or clone the repository's files [github repo](https://github.com/jurgen1c        Ruby-Capstone-Twitter-Bot.git)
 - Have Ruby 2.7 installed (to check if it is installed you can run: ruby -version in your console)
-- Install necessary gems (Chatterbot & Nokogiri, run cmd gem install <'gem name'>)
-- In your terminal navigate to directory and run command ruby bin/whistle_bot.rb
-
+- Install necessary gems from Gemfile(Chatterbot & Nokogiri, run cmd gem install <'gem name'>)
+- In your terminal navigate to directory and run command ruby bin/main.rb
+- For tests, in your terminal run cmd rspec (be sure to be in right directory)
 
 ## Description
 

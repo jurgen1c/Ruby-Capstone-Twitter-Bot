@@ -1,9 +1,8 @@
 require 'twitter'
 
-
 class Whistle_bot
-  attr_reader :client 
-  attr_writer :arg, :user, :method
+  attr_reader :client
+  attr_writer :arg, :user, :method, :res
   def initialize
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key = "SLun3OyIGUCbdwULhnv5vZ01z"
@@ -13,7 +12,7 @@ class Whistle_bot
     end
   end
 
-  def bot_actions(method, user = nil, arg)
+  def bot_actions(method, user, arg)
     @method = method
     @user = user
     @arg = arg
@@ -22,7 +21,7 @@ class Whistle_bot
     elsif @method == 'tweet'
       bot_tweet(@arg)
     elsif @method == 'reply'
-      bot_reply_tweet()
+      bot_reply_tweet(@user, @arg)
     else
       raise 'Please input a valid method'
     end
@@ -30,29 +29,33 @@ class Whistle_bot
 
   private
 
-  def bot_search(user, *arg)
+  def bot_search(user, args)
+    @arg = args
     @user = user
-    @arg = arg
     @client.search(@user, @arg)
   end
   
-  def bot_tweet(*arg)
+  def bot_tweet(arg)
     @arg = arg
     @client.update(@arg)
   end
 
-  def bot_reply_tweet(user, *arg)
-    @user = user
+  def bot_reply_tweet(res, arg)
     @arg = arg
-    @client.bot_search(@user, @arg).id
+    @user = res
+    @client.update(@user, in_reply_to_status_id: @arg)
   end
 end
 
-tester = Whistle_bot.new
+#tester = Whistle_bot.new
+#i = "@HamillHimself"
+#tester.bot_actions('search', "from:#{i}", result_type: "recent").take(2).each do |tweet|
+#  test_t = "#{i} Hello im a student testing my bot"
+#  tester.bot_actions('reply', test_t, tweet.id)
+#  puts tweet
+#end
 
-tester.bot_actions('search', "from:heyamberwilkie", result_type: "recent").take(5).each do |tweet|
-  puts tweet.text
-end
+
 
 
 
